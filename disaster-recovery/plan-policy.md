@@ -25,6 +25,7 @@ This policy applies to the management and technical staff of <Company Name>.
 ###4.1 Contingency Plans
 
 The following contingency plans must be created:
+
 1. Computer Emergency Response Plan: Who is to be contacted, when, and how? What immediate actions must be taken in the event of certain occurrences?
 2. Succession Plan: Describe the flow of responsibility when normal staff is unavailable to perform their duties.
 3. Data Study: Detail the data stored on the systems, its criticality, and its confidentiality. 
