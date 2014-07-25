@@ -1,4 +1,8 @@
 doc
 ===
 
-Documentation or mirrored instructions
+This code repository contains documentation, how-to, and mirrored instructions in `Markdown` text.
+
+Changes in Markdown are easier to compare.
+
+Tracking changes is done as part of the code versioning system.
