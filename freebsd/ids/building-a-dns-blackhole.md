@@ -1,37 +1,35 @@
+#Building a DNS Blackhole with FreeBSD
+
+Retrieved on 2014-07-25 17:13:34 UTC+0000 from http://www.pintumbler.org/Code/dnsbl
+
+##Preamble
+
+This document will outline how to setup FreeBSD to act as a DNS Blackhole (DNSBH).
+
+- Hardware requirements
+- How to configure BIND
+- How to automate the update process
+- How to setup Apache to provide an information page to the end user
+- Monitoring examples and ideas
+- Summary
+
+###What is a DNS Blackhole and why would I want one?
+
+A DNS blackhole (DNSBH) in its simplest form is just a box running bind that maintains a listing of malicious domains. When clients request a 'flagged' domain they will be redirected to either themselves (localhost), or to a safe local location that explains to the user why they just ended up where they did.
+
+Keep in mind that this isn't an inline device and depending of the deployment strategy can be easily bypassed. That being said, It is low cost, low maintenance, somewhat flexible and if deployed correctly can still be quite effective at threat mitigation.
+
+The real truth is in the numbers though. Our deployment blocks on average 1000 requests/day. Even if only 1% of that would have led to an infection, the hardware and operation costs of the device would be recouped in a couple weeks.
+
+##Hardware Requirements
+
+The beauty of this solution is that it requires very little horsepower. My first incarnation consisted of Dell Optiplex desktop. This bad boy had 1GB of RAM and a dual core Pentium 4 processor@3.00GHz complete with an 80GB SATA drive. This served 5000 clients without any issues.
+
+The second incarnation I spec'd up a bit because I was interested in running IDS components on the inbound requests to see if there was added value to this approach. The incumbent is a 2U server with 2 dual core processors@2.8GHz and 5GB of RAM. It also has RAID. This is overkill of course but it opens up some data mining possibilities.
+
 <div id="sites-canvas-main-content">
-<table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr"><b><font size="3"><font size="6">Building a DNS Blackhole with FreeBSD</font><br>
+<table xmlns="http://www.w3.org/1999/xhtml" cellspacing="0" class="sites-layout-name-one-column sites-layout-hbox"><tbody><tr><td class="sites-layout-tile sites-tile-name-content-1"><div dir="ltr">
 <br>
-<br>
-<br>
-</font><font size="4"><font style="color:rgb(0,0,0)">Preamble</font></font></b><br>
-<br>
-This document will outline how to setup FreeBSD to 
-act as a DNS Blackhole (DNSBH).<br>
-<ul><li><a href="#l1">Hardware requirements</a><br>
-</li>
-<li><a href="#l2">How to configure BIND</a></li>
-<li><a href="#l3">How to automate the update process</a> <a href="#script">(a sample script is provided)</a><br>
-</li>
-<li><a href="#l4">How to setup Apache to provide an information page to the end user</a><br>
-</li>
-<li><a href="#l5">Monitoring examples and ideas</a></li>
-<li><a href="#l6">Summary</a></li></ul>
-<font size="5" style="color:rgb(0,0,0)"><b>
-<font size="4" style="font-family:arial,sans-serif"><br>
-What is a DNS Blackhole and why would I want one?</font></b></font><br>
-<p>A DNS blackhole (DNSBH) in its simplest form is just a box running bind that maintains a listing of malicious domains. When clients request a 'flagged' domain they will be redirected to either themselves (localhost), or to a safe local location that explains to the user why they just ended up where they did.<br>
-</p>
-Keep in mind that this isn't an inline device and depending of the deployment strategy can be easily bypassed. That being said, It is low cost, low maintenance, somewhat flexible and if deployed correctly can still&nbsp; be quite effective at threat mitigation.<br>
-<p>The real truth is in the numbers though. Our deployment blocks on average 1000 requests/day. Even
-if only 1% of that would have led to an infection, the hardware and operation
-costs of the device would be recouped in a couple weeks.</p>
-<p><br>
-</p>
-<p><font size="4"><b><a name="l1">Hardware Requirements</a></b></font><br>
-</p>
-The beauty of this solution is that it requires very little horsepower. My first incarnation consisted of Dell Optiplex desktop. This bad boy had 1GB of RAM and a dual core Pentium 4 processor@3.00GHz complete with an 80GB SATA drive. This served 5000 clients without any issues.<br>
-<br>
-The second incarnation I spec'd up a bit because I was interested in running IDS components on the inbound requests to see if there was added value to this approach. The incumbent is a 2U server with 2 dual core processors@2.8GHz and 5GB of RAM. It also has RAID. This is overkill of course but it opens up some data mining possibilities.<br>
 <font size="4"><b><br>
 <font size="5"><br>
 <font size="4"><a name="l2">How to configure BIND</a></font></font></b></font><font size="5"><b><br>
