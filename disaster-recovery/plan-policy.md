@@ -1,4 +1,4 @@
-#<Company Name> Computer Disaster Recovery Plan Policy
+#[Company Name] Computer Disaster Recovery Plan Policy
 
 Retrieved on 2014-07-25 18:17:48 UTC+0000 from http://www.sans.org/security-resources/policies/disaster_recovery2.pdf
 
@@ -6,19 +6,19 @@ Retrieved on 2014-07-25 18:17:48 UTC+0000 from http://www.sans.org/security-reso
 
 Since disasters happen so rarely, management often ignores the disaster recovery planning 
 process. It is important to realize that having a contingency plan in the event of a disaster gives 
-<Company Name> a competitive advantage. This policy requires management to financially 
+[Company Name] a competitive advantage. This policy requires management to financially 
 support and diligently attend to disaster contingency planning efforts. Disasters are not limited to 
 adverse weather conditions. Any event that could likely cause an extended delay of service 
 should be considered. 
 
 ##2.0 Purpose 
 
-This policy defines the need for management to support ongoing disaster planning for <Company 
-Name>.
+This policy defines the need for management to support ongoing disaster planning for [Company 
+Name].
  
 ##3.0 Scope 
 
-This policy applies to the management and technical staff of <Company Name>. 
+This policy applies to the management and technical staff of [Company Name]. 
  
 ##4.0 Policy
 
@@ -43,7 +43,7 @@ consequences.
 
 ###4.3 Plans must be Updated
 
-Review all plans annually so changes in the <Company>’s situation can be incorporated. 
+Review all plans annually so changes in the [Company Name]’s situation can be incorporated. 
 
 ##5.0 Enforcement
 
