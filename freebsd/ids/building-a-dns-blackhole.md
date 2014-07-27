@@ -53,8 +53,8 @@ Save and exit the file.
 2) Edit `/etc/hosts`:
 
 ```
-::1        localhost localhost.my.domain bhdns<br>
-127.0.0.1  localhost localhost.my.domain bhdns<br>
+::1        localhost localhost.my.domain bhdns
+127.0.0.1  localhost localhost.my.domain bhdns
 10.0.0.1   bhdns.mydomain.ca bhdns
 ```
 
@@ -65,7 +65,7 @@ Save and exit the file.
 ```
 nameserver 127.0.0.1
 domain mydomain.ca
-nameserver <upstream provider>
+nameserver [upstream provider]
 ```
 
 Save and exit the file.
@@ -87,7 +87,7 @@ listen-on { 10.0.0.1; };
 Now you can set up a forwarder, in my case the same one used in `/etc/resolv.conf`:
 
 ```
-forwarders { <upstream provider>; };
+forwarders { [upstream provider]; };
 ```
 
 
