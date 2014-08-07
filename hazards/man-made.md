@@ -1,13 +1,20 @@
 # Man-made disasters
 
-- Gas factory explosion
-- Gas tank transport explosion
-- Chemical accident
-- Power failure
+- Theft
+- Fire
+- Water pipe burst / flooding
+- Chemical accident / attack
+- No access to room
+- No access to building
 - Building collapse
-- Building not structurally sound
-- Road closed
+- Bomb threat
+- Power failure
+- Hardware failure
+- Software failure
+- Backup failure
 - Cyber denial of service
 - Cyber intrusion
 - Cyber theft
 - Cyber vandalism
+- Factory explosion
+- Transport explosion
