@@ -1,6 +1,7 @@
 # Man-made disasters
 
 - Theft
+- Violence or threat thereof
 - Fire
 - Water pipe burst / large flooding
 - Liquid damage / spill on equipment
