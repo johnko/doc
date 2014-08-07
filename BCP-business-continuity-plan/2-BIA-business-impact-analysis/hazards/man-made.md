@@ -6,6 +6,7 @@
 - Liquid damage / spill on equipment
 - Equipment jam
 - Chemical accident / attack
+- Biological pandemic
 - No access to room
 - No access to building
 - Building collapse
