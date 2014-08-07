@@ -11,6 +11,7 @@
 - No access to building
 - Building collapse
 - Bomb threat
+- Transport crash / explosion
 - Power failure
 - HVAC failure
 - Hardware failure
@@ -20,5 +21,4 @@
 - Cyber intrusion
 - Cyber theft
 - Cyber vandalism
-- Factory explosion
-- Transport explosion
+- Neighbouring factory explosion
