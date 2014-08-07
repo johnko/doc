@@ -2,13 +2,16 @@
 
 - Theft
 - Fire
-- Water pipe burst / flooding
+- Water pipe burst / large flooding
+- Liquid damage / spill on equipment
+- Equipment jam
 - Chemical accident / attack
 - No access to room
 - No access to building
 - Building collapse
 - Bomb threat
 - Power failure
+- HVAC failure
 - Hardware failure
 - Software failure
 - Backup failure
