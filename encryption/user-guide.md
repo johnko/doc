@@ -36,4 +36,4 @@
   - Open archive
 - Make sure the password works, then close it.
 - Send the "package20141225.7z" file.
-- If sent successfully, delete the "package20141225.7z" file.
+- If sent successfully, delete the "package20141225.7z" file and the "package20141225" folder.
