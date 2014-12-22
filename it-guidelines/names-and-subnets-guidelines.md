@@ -36,14 +36,14 @@ Naming                 | City (Data Center Number) - Country - Region
 |                      | Example: ny1-us-east-na.acme.local
 |                      | sf1-us-west-na.acme.local
 Private Network Subnet | Different for each DC site. Try to avoid common ones.
-|                      | Example: ny1-us-east-na.acme.local is 10.0.10.0/32 (mask 255.255.255.0)
-|                      | sf1-us-west-na.acme.local is 10.0.12.0/32 (mask 255.255.255.0)
+|                      | Example: ny1-us-east-na.acme.local is 10.0.10.0/24 (mask 255.255.255.0)
+|                      | sf1-us-west-na.acme.local is 10.0.12.0/24 (mask 255.255.255.0)
 Alternate Private Network Subnet | Different for each DC site. For use on servers as alias IPs for alternate access in case of subnet clash over VPN.
-|                                | Example: ny1-us-east-na.acme.local is 10.0.11.0/32 (mask 255.255.255.0)
-|                                | sf1-us-west-na.acme.local is 10.0.13.0/32 (mask 255.255.255.0)
+|                                | Example: ny1-us-east-na.acme.local is 10.0.11.0/24 (mask 255.255.255.0)
+|                                | sf1-us-west-na.acme.local is 10.0.13.0/24 (mask 255.255.255.0)
 Server Management Network Subnet | Different for each DC site. To keep management and client traffic separate.
-|                                | Example: ny1-us-east-na.acme.local is 192.168.10.0/32 (mask 255.255.255.0)
-|                                | sf1-us-west-na.acme.local is 192.168.12.0/32 (mask 255.255.255.0)
+|                                | Example: ny1-us-east-na.acme.local is 192.168.10.0/24 (mask 255.255.255.0)
+|                                | sf1-us-west-na.acme.local is 192.168.12.0/24 (mask 255.255.255.0)
 Jail Network Subnet    | Same for all jails on interface lo1.
 |                      | Example: ny1-us-east-na.acme.local is 10.7.7.0
 Virtual Network Subnet | Same for all virtual computers; especially for migration.
@@ -62,8 +62,8 @@ Type | Description
 Naming                 | Name the cluster after its function. Lowercase. 10 characters max.
 |                      | Example: dhcpd.clstr.acme.local, pxe.clstr.acme.local, cdn.clstr.acme.local
 Cluster Network Subnet | If segregating the cluster, should be different for each cluster from other traffic.
-|                      | Example: alpha.acme.local is 172.16.1.0/32 (mask 255.255.255.0)
-|                      | beta.acme.local is 172.16.1.0/32 (mask 255.255.255.0)
+|                      | Example: alpha.acme.local is 172.16.1.0/24 (mask 255.255.255.0)
+|                      | beta.acme.local is 172.16.1.0/24 (mask 255.255.255.0)
 
 ### 4.05 Servers
 
@@ -156,3 +156,4 @@ DC                | Data center.
 Name           | Date       | Description
 ---------------|------------|------------
 John Ko        | 2014-08-11 | Original
+John Ko        | 2014-12-22 | update mask to /24 to match brackets
